@@ -69,16 +69,7 @@ def parcours (repertoire, prof) :
                                                 else:
                                                     dico[substring].append({'chemin':chemin, 'ligne':line.strip()})
 
-    #                                matched_word = match.group()
-
-    #                               if 4 <= len(matched_word)<= 8:
-    #                                    for i in range(4, 9):
-    #                                        if matched_word[:i] not in dico.keys():
-    #                                            dico[matched_word[:i]] = [{'chemin':chemin, 'ligne':line.strip()}]
-    #                                        else:
-    #                                            if i <= len(matched_word[:i]) :
-    #                                                if fichier == "indexation.py" : print('>>'+matched_word[:i]+'|')
-    #                                                dico[matched_word[:i]].append({'chemin':chemin, 'ligne':line.strip()})
+                                               dico[matched_word[:i]].append({'chemin':chemin, 'ligne':line.strip()})
 
                     except UnicodeDecodeError:
                         pass
@@ -86,8 +77,7 @@ def parcours (repertoire, prof) :
                         pass
                     except Exception as error:
                         pass
-
-#dikan le 0 de indentation ref le manao test       
+   
 parcours(sys.argv[1], 0)
 #print(dico)
 
