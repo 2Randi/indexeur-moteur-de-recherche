@@ -32,3 +32,4 @@ for mot, resultats in new_dico.items():
             # Vérifier à la fois le mot clé et l'extension si spécifiée
             if (ext is None or ext.lower() in extension) and mot_rechercher in ligne:
                 print(resultat)
+                
